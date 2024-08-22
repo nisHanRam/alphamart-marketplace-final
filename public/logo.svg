@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="29.98" y1="32.17" x2="223.46" y2="225.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#43d0f7"/>
+      <stop offset="1" stop-color="#4397f7"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M256,128.32c0,98.56-42.56,116.15-127.69,126.71C58.34,263.72-7.14,213.11.63,128.32,11.27,12.17,64.09-6.36,128.31,1.61c85.12,10.56,127.69,41.58,127.69,126.71Z"/>
+  <g>
+    <ellipse class="cls-2" cx="144.27" cy="196.96" rx="15.96" ry="15.84"/>
+    <ellipse class="cls-2" cx="184.18" cy="196.96" rx="15.96" ry="15.84"/>
+  </g>
+  <polyline class="cls-3" points="230.03 109.76 20.77 127.36 56.24 59.31 117.71 188.37"/>
+</svg>

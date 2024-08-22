@@ -1,28 +1,35 @@
 "use server";
 
 import { filtersByCategoryId } from "@/lib/constants";
-// import prisma from "./db";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import prisma from "./db";
 
 export async function createAsset(formData: FormData) {
-  console.log("From server action", formData.get("asset-category"), typeof formData.get("asset-category"));
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+
   const assetCategory = Number(formData.get("asset-category"));
   const filters = filtersByCategoryId[assetCategory];
-  console.log(filters);
-  
-}
 
-// console.log(
-//   "Checking API filter templatetype",
-//   formData.getAll("templatetype")
-// );
-// console.log("Checking API filter format", formData.getAll("format"));
-// console.log("Checking API filter industry", formData.getAll("industry"));
-// console.log(
-//   "Checking API filter softwarecompatibility",
-//   formData.getAll("softwarecompatibility")
-// );
-// console.log(
-//   "Checking API filter designstyle",
-//   formData.getAll("designstyle")
-// );
-// console.log("Checking API filter SOAP",formData.get("soap"));
+  let selectedFilterOptions: string[] = [];
+  filters.forEach((item) => {
+    const options = formData.getAll(item) as string[];
+    selectedFilterOptions = [...selectedFilterOptions, ...options];
+  });
+
+  if (user) {
+    await prisma.asset.create({
+      data: {
+        name: formData.get("asset-name") as string,
+        description: formData.get("asset-description") as string,
+        userId: user?.id,
+        assetCategoryId: Number(formData.get("asset-category")),
+        filterOptions: {
+          create: selectedFilterOptions.map((item) => {
+            return { filterOption: { connect: { id: Number(item) } } };
+          }),
+        },
+      },
+    });
+  }
+}

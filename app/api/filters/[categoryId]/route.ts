@@ -7,7 +7,6 @@ export async function GET(
 ) {
   try {
     const categoryId = params.categoryId;
-    // console.log(categoryId);
 
     const data = await prisma.filter.findMany({
       where: { categoryId: Number(categoryId) },

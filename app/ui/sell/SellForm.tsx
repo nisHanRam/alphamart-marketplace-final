@@ -45,6 +45,18 @@ const SellForm = ({
           </CardHeader>
           <CardContent>
             <form action={createAsset}>
+              <input
+                type="text"
+                name="asset-name"
+                placeholder="Give your asset a name"
+                className="bg-blue-50/5 border-none outline-none px-2 py-1 rounded m-1"
+                />
+              <input
+                type="text"
+                name="asset-description"
+                placeholder="Describe your asset"
+                className="bg-blue-50/5 border-none outline-none px-2 py-1 rounded m-1"
+              />
               <SelectCategory
                 assetCategories={assetCategories}
                 onCategoryChange={(value: string) => setSelectedCategory(value)}

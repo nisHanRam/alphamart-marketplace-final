@@ -15,8 +15,8 @@ const Navigation = async () => {
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-1">
           <Image src={logo} height={32} alt="brand-logo" />
-          <p className="h5">ALPHAMART</p>
-        </div>  <Separator orientation="vertical" className="bg-blue-50/10" />
+        </div>
+        <Separator orientation="vertical" className="bg-blue-50/10" />
         <ul className="flex justify-center items-center gap-4">
           <li>Explore Assets</li>
           {user && (

@@ -1,6 +1,6 @@
 import HeroAnimation from "./ui/HeroAnimation";
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <div className="h-[calc(100vh-64.8px)] grid grid-cols-2">
       <div className="col-span-1 h-full flex flex-col items-start justify-center p-4 gap-8">

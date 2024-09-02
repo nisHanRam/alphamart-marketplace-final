@@ -32,11 +32,15 @@
   @apply text-[21px];
 }
 
-.p {
+.para {
   @apply text-[16px];
 }
 
-.p-sm {
+.para-sm {
+  @apply text-[14px];
+}
+
+.para-xs {
   @apply text-[12px];
 }
 

@@ -18,18 +18,8 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        "brandon-grotesque": ["brandon-grotesque", "sans-serif"],
-      },
       colors: {
         canvas: "#060D19",
-        success: "#C5F53B",
-        error: "#F5533B",
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         "accordion-down": {

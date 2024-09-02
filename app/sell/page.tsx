@@ -12,6 +12,3 @@ const SellPage = async () => {
 };
 
 export default SellPage;
-// if (!user) {
-//   throw new Error("Unauthorized");
-// }

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .h1 {
   @apply text-[90px];
 }
@@ -34,6 +40,14 @@
   @apply text-[12px];
 }
 
-.btn {
-  @apply py-1 px-2 rounded opacity-75 hover:opacity-100;
+.btn-small {
+  @apply py-1 px-2 rounded hover:opacity-90;
+}
+
+.btn-big {
+  @apply p-4 rounded hover:opacity-90;
+}
+
+.brand-gradient {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500;
 }

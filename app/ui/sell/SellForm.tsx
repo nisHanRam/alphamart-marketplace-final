@@ -50,7 +50,7 @@ const SellForm = ({
                 name="asset-name"
                 placeholder="Give your asset a name"
                 className="bg-blue-50/5 border-none outline-none px-2 py-1 rounded m-1"
-                />
+              />
               <input
                 type="text"
                 name="asset-description"
@@ -64,7 +64,7 @@ const SellForm = ({
               {selectedCategory && (
                 <ConfigureFilters selectedCategory={selectedCategory} />
               )}
-              <button type="submit" className="btn bg-blue-50/10 mt-2">
+              <button type="submit" className="btn-small bg-blue-50/10 mt-2">
                 Create Asset
               </button>
             </form>

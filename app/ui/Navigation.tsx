@@ -10,13 +10,13 @@ const Navigation = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
-  // console.log(user);
-
   return (
     <div className="flex justify-between p-4 border-b border-blue-50/10">
       <div className="flex items-center gap-4">
-        <Image src={logo} height={32} alt="brand-logo" />
-        <Separator orientation="vertical" className="bg-blue-50/10" />
+        <div className="flex items-center gap-1">
+          <Image src={logo} height={32} alt="brand-logo" />
+          <p className="h5">ALPHAMART</p>
+        </div>  <Separator orientation="vertical" className="bg-blue-50/10" />
         <ul className="flex justify-center items-center gap-4">
           <li>Explore Assets</li>
           {user && (
@@ -26,7 +26,9 @@ const Navigation = async () => {
           )}
         </ul>
       </div>
-      {!user && <LoginLink className="btn bg-blue-50/10">Login</LoginLink>}
+      {!user && (
+        <LoginLink className="btn-small bg-blue-50/10">Login</LoginLink>
+      )}
       {user && (
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
@@ -48,7 +50,7 @@ const Navigation = async () => {
             </div>
           </div>
           <Separator orientation="vertical" className="bg-blue-50/10" />
-          <LogoutLink className="btn bg-blue-50/10">Logout</LogoutLink>
+          <LogoutLink className="btn-small bg-blue-50/10">Logout</LogoutLink>
         </div>
       )}
     </div>

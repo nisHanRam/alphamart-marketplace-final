@@ -14,7 +14,9 @@ export function LoginAlert({ onOpenChange }: { onOpenChange: () => void }) {
             continue.
           </p>
         </div>
-        <LoginLink className="btn bg-blue-50/10 self-end">Login</LoginLink>
+        <LoginLink className="btn-small bg-blue-50/10 self-end">
+          Login
+        </LoginLink>
       </div>
     </div>
   );
